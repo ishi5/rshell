@@ -1,2 +1,5 @@
-# ityag001
-rshell 
+# RSHELL project
+Ishani Tyagi
+
+# Introduction
+We want to create a command shell. We are using a composite pattern. In this program the input will be taken/read in the form of commands. The command line is separated by '&&', '||' and ';'. We are reading in this input and outputting the commandline with a space at the end. Then we use separatingCommand to locate spaces and then push back everything before the space into a vector that is a parameter for our parsing function. In our parsing function we differentiate between arguments, commands, and connectors. Then we create new Tokens based on what the input was. Our parent class is the Token class. Under that we have our Connector and Command classes. We created a class for each type of connector which is under the Connector class. We also have an execute class in which we use the fork(), execvp(), and waitpid() functions which implement the calls. We had a separate class called Expression. We have ConnectorsExpr and Leaf under that which help us actually implement our connectors. We perform this by calling parsing in our main function. And then in our parsing once we know the type of the connector we call on the expression class for the according connector.
