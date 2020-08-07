@@ -6,21 +6,25 @@ Developed a Linux shell from scratch that emulates the linux terminal which read
 
 # Usage
 Commands have the format
+
+```
 $ executable [argumentList] [connector] [executable] ...
+```
 
 Valid connectors
-||, && or ;
+`||`, `&&` or `;`
 
 The executable can be any executable program located at one of the PATH environment variable locations and the [argumentList] is a list of zero or more arguments separated by spaces.
 
-Anything that appears after a # character in the line should be considered a comment
+Anything that appears after a `#` character in the line should be considered a comment
 
-Additionally, the test and it’s equivalence  [ ]  should return 0 (TRUE) if the test succeeds and 1 (FALSE) if the test fails
+Additionally, the `test` command and it’s symbolic equivalent  `[ ]`  should return 0 (TRUE) if the test succeeds and 1 (FALSE) if the test fails
 
-Parentheses ( ) are implemented as precedence operators to change the precedence of the execution of commands, connectors, and chains of connectors.
+Parentheses `( )` are implemented as precedence operators to change the precedence of the execution of commands, connectors, and chains of connectors.
 
 # Project Structure
 
+```
 ├── CMakeLists.txt
 ├── README.md
 ├── googletest
@@ -37,12 +41,14 @@ Parentheses ( ) are implemented as precedence operators to change the precedence
           ├── test_literal_tests.sh
           ├── test_symbolic_tests.sh
           ├── precedence_tests.sh
+```
 
 # Installation
 
+```sh
 git clone <assignment-repo-url>
 cd <assignment-repo-url>
 git checkout tags/hw3
 git submodule init
 git submodule update
-
+```
