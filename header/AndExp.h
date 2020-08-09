@@ -12,67 +12,63 @@
 #include<iostream>
 #include <vector>
 class AndExp: public ConnectorExp{
+	public:
+					
+		AndExp(Expression* left, Expression* right){ 
+
+			lside =left;
+			rside = right;
+		}
+	//make sure there is an or in main.cpp
+		/*int count =0;
+		std::vector<Token*> diff;
+		Tokenizer tkz;
+		std::string convert = "";
+         	 diff = tkz.separatingCommand(input);
+		for(int i=0; i < diff.size()-1; i++) {
+			convert += diff.at(i)->stringify();
+		}
+
+		for(int i=0; i < convert.size(); i++) {
+			// Update count if we see an ||
+			if (convert.at(i) == '&' && convert.at(i+1) == '&') {	
+				count = i+1;
+			}
+
+			// Keep pushing back into lside
+			// as long as there isn't an ||
+			if (count == 0) {
+				lside.push_back(diff.at(i));
+			}
+	
+			// If i happens after the second | in an ||,
+			// push back into rside instead
+			else {
+				rside.push_back(dif.at(i));
+			}
+		}*/
 			
-				public:
-					
+		std::string stringify() {
 
-						AndExp(Expression* left, Expression* right){ 
+			return "and i guess";
+		}
+		bool evaluate(){
 
-							lside =left;
-							rside = right;
-						}
-						//make sure there is an or in main.cpp
-							/*int count =0;
-							std::vector<Token*> diff;
-							Tokenizer tkz;
-							std::string convert = "";
-							 diff = tkz.separatingCommand(input);
-							for(int i=0; i < diff.size()-1; i++) {
-								convert += diff.at(i)->stringify();
-						}
+			bool l_succeeded = lside->evaluate(); //.
+			bool r_succeeded = false;
 
-						for(int i=0; i < convert.size(); i++) {
+			if(l_succeeded){
+				r_succeeded = rside->evaluate();
+			}
 
-							// Update count if we see an ||
-							if (convert.at(i) == '&' && convert.at(i+1) == '&') {	
-								count = i+1;
-							}
+			return (l_succeeded) 
+			&& (r_succeeded);
 
-							// Keep pushing back into lside
-							// as long as there isn't an ||
-							if (count == 0) {
-								lside.push_back(diff.at(i));
-							}
+		}
 
-							// If i happens after the second | in an ||,
-							// push back into rside instead
-							else {
-								rside.push_back(dif.at(i));
-							}
-						}*/
-					
-						std::string stringify() {
-
-							return "and i guess";
-						}
-						bool evaluate(){
-
-								bool l_succeeded = lside->evaluate(); //.
-								bool r_succeeded = false;
-
-									if(l_succeeded){
-
-										r_succeeded = rside->evaluate();
-									}
-
-								return (l_succeeded) 
-								&& (r_succeeded);
-
-						}
-
-			//	private:
-						Expression* lside;
-						Expression* rside; 
+		//	private:
+		Expression* lside;
+		Expression* rside; 
 
 
 };

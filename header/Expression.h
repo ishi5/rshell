@@ -6,14 +6,14 @@
 #include<iostream>
 class Expression{
 
-				public:
-						Expression(){};
-					//	Expression(Expression* left, Expression* right){
+	public:
+		Expression(){};
+		//	Expression(Expression* left, Expression* right){
 			
-						virtual std::string stringify()=0;
-						virtual bool evaluate()=0;
-						Expression* exp;
+		virtual std::string stringify()=0;
+		virtual bool evaluate()=0;
+		Expression* exp;
 
-				};
+};
 
 #endif

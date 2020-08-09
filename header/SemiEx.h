@@ -13,14 +13,14 @@
 #include <vector>
 class SemiExp: public ConnectorExp{
 			
-				public:
-		 //make sure there is an or in main.cpp
+	public:
+	 //make sure there is an or in main.cpp
 
-							SemiExp(Expression* left, Expression* right){ 
+		SemiExp(Expression* left, Expression* right){ 
 
-							lside =left;
-							rside = right;
-
+			lside =left;
+			rside = right;
+		}
 						
 						/*int count =0;
 						std::vector<Token*> diff;
@@ -50,23 +50,22 @@ class SemiExp: public ConnectorExp{
 								rside.push_back(dif.at(i));
 							}
 						}*/
-					}
-						std::string stringify(){
+		std::string stringify(){
 
-							return "semi i guess";
-						}
-						bool evaluate(){
+			return "semi i guess";
+		}
+		
+		bool evaluate(){
 
-								lside->evaluate();
+			lside->evaluate();
 
-								return rside->evaluate();
+			return rside->evaluate();
 
-							}
+		}
 
-
-				private:
-						Expression* lside;
-						Expression* rside; 
+		private:
+			Expression* lside;
+			Expression* rside; 
 
 
 };

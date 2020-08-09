@@ -10,12 +10,12 @@
 
 class ConnectorExp: public Expression{
 			
-				public:
-				
-						virtual std::string stringify()=0;
-						virtual bool evaluate()=0;
+	public:
+			
+		virtual std::string stringify()=0;
+		virtual bool evaluate()=0;
 				
 
-	};
+};
 
 #endif
