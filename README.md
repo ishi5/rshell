@@ -42,13 +42,3 @@ Parentheses `( )` are implemented as precedence operators to change the preceden
           ├── test_symbolic_tests.sh
           ├── precedence_tests.sh
 ```
-
-# Installation
-
-```sh
-git clone <assignment-repo-url>
-cd <assignment-repo-url>
-git checkout tags/hw3
-git submodule init
-git submodule update
-```
