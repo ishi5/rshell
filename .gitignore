@@ -10,6 +10,7 @@
 # Precompiled Headers
 *.gch
 *.pch
+*.pc
 
 # Compiled Dynamic libraries
 *.so
@@ -30,4 +31,12 @@
 *.exe
 *.out
 *.app
+rshell
+test
 
+# CMake Temp Files
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+
+temp.txt
